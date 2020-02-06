@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LoggingAspect.java&apos; to &apos;Rest_Assignment/src/main/java/com.yash&apos;&#x0D;&#x0A;- Original project: &apos;AOPExample2&apos;&#x0D;&#x0A;- Destination element: &apos;Rest_Assignment/src/main/java/com.yash&apos;&#x0D;&#x0A;- Original element: &apos;com.aop.aspect.LoggingAspect.java&apos;" description="Copy compilation unit" destination="=Rest_Assignment/src\/main\/java&lt;com.yash" element1="/src\/main\/java&lt;com.aop.aspect{LoggingAspect.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1569494236755" units="1" version="1.0"/>
+</session>

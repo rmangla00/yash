@@ -1,0 +1,85 @@
+package com.test;
+
+import java.util.Scanner;
+
+import com.yash.Exception.VendingMachineException;
+import com.yash.Model.DrinksType;
+
+public class Demo {
+	public static void main(String[] args) {
+
+		do {
+			System.out.println("\n*****************************************");
+			System.out.println("Press 1 for Tea\t\t Rs : 10");
+			System.out.println("Press 2 for Black Tea\t Rs : 5");
+			System.out.println("Press 3 for Coffee\t Rs : 15");
+			System.out.println("Press 4 for Black Coffee Rs : 10");
+			System.out.println("Press 5 to Refill Container");
+			System.out.println("Press 6 to Check Total Sale");
+			System.out.println("Press 7 to Check Container Status");
+			System.out.println("Press 8 to Reset Container");
+			System.out.println("Press 0 to Exit Vending Machine");
+			System.out.println("*****************************************\n");
+
+			Scanner in = new Scanner(System.in);
+			Integer inputChoice = in.nextInt();
+			Integer quantity = 0;
+
+			try {
+				switch (inputChoice) {
+				case 1:
+					System.out.println("You have selected Tea");
+					System.out.println("How much tea you want");
+					quantity = in.nextInt();
+					machine.makeDrink(DrinksType.TEA, quantity);
+					machine.containerStatus();
+					break;
+				case 2:
+					System.out.println("You have selected Black Tea");
+					System.out.println("How much black tea you want");
+					quantity = in.nextInt();
+					machine.makeDrink(DrinksType.BLACK_TEA, quantity);
+					machine.containerStatus();
+					break;
+				case 3:
+					System.out.println("You have selected Coffee");
+					System.out.println("How much coffee you want");
+					quantity = in.nextInt();
+					machine.makeDrink(DrinksType.COFFEE, quantity);
+					machine.containerStatus();
+					break;
+				case 4:
+					System.out.println("You have selected Black Coffee");
+					System.out.println("How much black coffee you want");
+					quantity = in.nextInt();
+					machine.makeDrink(DrinksType.BLACK_COFFEE, quantity);
+					machine.containerStatus();
+					break;
+				case 5:
+					break;
+				case 6:
+//					System.out.println(container.totalDrinkWiseSale());
+					break;
+				case 7:
+					machine.containerStatus();
+					break;
+				case 8:
+//					container.resetContainer();
+					break;
+				case 0:
+					System.out.println("Exiting Vending Machine...");
+					in.close();
+					status = false;
+					break;
+				default:
+					System.out.println("You have entered wrong input...");
+					break;
+				}
+			} catch (VendingMachineException exception) {
+				System.out.println("Exception occured: " + exception);
+			}
+
+		} while (status);
+	}
+
+}

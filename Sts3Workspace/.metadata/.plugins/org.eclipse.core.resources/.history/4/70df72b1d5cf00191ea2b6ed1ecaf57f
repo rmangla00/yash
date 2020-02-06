@@ -1,0 +1,16 @@
+package com.yash;
+
+public class MyArrayList1 {
+
+	private Object[] list;
+	private int actSize = 0;
+
+	public MyArrayList1() {
+		list = new Object[10];
+	}
+
+	public void add(Object obj) {
+		list[actSize] = obj;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.test;
+
+public class Demo {
+	public static void main(String[] args) {
+		System.out.printf("%10s %20s %20s %n", "Drink Type", "Quantity", "Cost");
+
+	}
+
+}

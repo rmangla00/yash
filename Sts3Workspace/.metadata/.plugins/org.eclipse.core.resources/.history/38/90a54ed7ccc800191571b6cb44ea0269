@@ -1,0 +1,21 @@
+package com.test;
+
+public class Demo {
+	public static void main(String[] args) {
+
+		System.out.println("\n*****************************************");
+		System.out.println("Press 1 for Tea\t\t Rs : 10");
+		System.out.println("Press 2 for Black Tea\t Rs : 5");
+		System.out.println("Press 3 for Coffee\t Rs : 15");
+		System.out.println("Press 4 for Black Coffee Rs : 10");
+		System.out.println("Press 5 to Refill Container");
+		System.out.println("Press 6 to Check Total Sale");
+		System.out.println("Press 7 to Check Container Status");
+		System.out.println("Press 8 to Reset Container");
+		System.out.println("Press 0 to Exit Vending Machine");
+		System.out.println("*****************************************\n");
+//		
+
+	}
+
+}

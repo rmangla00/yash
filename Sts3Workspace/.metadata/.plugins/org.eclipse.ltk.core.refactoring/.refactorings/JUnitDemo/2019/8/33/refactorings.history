@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;MockitoDemo/src/main/java/com.yash.MockitoDemo&apos;&#x0D;&#x0A;- Original project: &apos;JUnitDemo&apos;&#x0D;&#x0A;- Destination element: &apos;MockitoDemo/src/main/java/com.yash.MockitoDemo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.yash.MathUtilTest.java&#x0D;&#x0A;     com.yash.MathUtils.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=MockitoDemo/src\/main\/java&lt;com.yash.MockitoDemo" element1="/src&lt;com.yash{MathUtilTest.java" element2="/src&lt;com.yash{MathUtils.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1565674538949" units="2" version="1.0"/>
+</session>

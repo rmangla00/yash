@@ -1,0 +1,25 @@
+package com.yash;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+public class CountSerirs {
+
+	public static void main(String[] args) {
+		List<Integer> arr = Arrays.asList(1, 2, 4, 6, 3, 4, 3, 2, 2, 7, 12, 14, 16);
+
+		HashMap<Integer, List<Integer>> result = new HashMap<Integer, List<Integer>>();
+		int sum = 0;
+
+		for (Integer integer : arr) {
+			int count = 0;
+			if (integer % 2 == 0) {
+				count++;
+				if (count >= 3) {
+					sum++;
+				}
+			}
+		}
+	}
+}

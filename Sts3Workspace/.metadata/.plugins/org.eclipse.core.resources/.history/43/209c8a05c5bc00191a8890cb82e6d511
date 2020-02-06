@@ -1,0 +1,27 @@
+package com.yash;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.*;
+
+import org.hamcrest.Matcher;
+import org.junit.Test;
+
+public class MatcherTest {
+
+	@Test
+	public void test() {
+		
+		assertThat(123,not(is(13)));
+	}
+	
+	@Test
+	public void test1() {
+		Mockito
+		
+	}
+
+	
+	
+	
+}

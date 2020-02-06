@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.yash.AssignmentCore.LinkedListTest.java&apos; to &apos;LinkedListCountTest.java&apos;&#x0D;&#x0A;- Original project: &apos;AssignmentCore&apos;&#x0D;&#x0A;- Original element: &apos;com.yash.AssignmentCore.LinkedListTest.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.yash.AssignmentCore.LinkedListCountTest.java&apos;" description="Rename compilation unit &apos;LinkedListTest.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/test\/java&lt;com.yash.AssignmentCore{LinkedListTest.java" name="LinkedListCountTest.java" references="false" stamp="1571032650885" version="1.0"/>
+</session>

@@ -1,0 +1,52 @@
+package com.yash.AssignmentCore4;
+
+class Node {
+	int data;
+	Node next;
+
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+	}
+
+}
+
+public class MyLinkedList {
+
+	private Node start;
+
+	public boolean add(int value) {
+		if (start == null) {
+			start = new Node(value);
+		} else {
+			Node itr = start;
+			while (itr.next != null) {
+				itr = itr.next;
+			}
+			itr.next = new Node(value);
+		}
+		return false;
+	}
+
+	public MyLinkedList sortAndRemoveDuplicates() {
+
+		Node itr = start;
+		while (itr.next != null) {
+			itr = itr.next;
+		}
+		return null;
+	}
+
+	@Override
+	public String toString() {
+		Node itr = start;
+		String llist = "";
+		while (itr.next != null) {
+			llist += itr.data + " ";
+			itr = itr.next;
+		}
+		llist += itr.data + " ";
+		return llist;
+	}
+
+}

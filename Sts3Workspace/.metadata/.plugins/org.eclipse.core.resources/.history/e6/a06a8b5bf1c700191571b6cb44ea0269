@@ -1,0 +1,16 @@
+package com.test;
+
+import java.awt.List;
+import java.util.Arrays;
+
+public class Demo {
+	public static void main(String[] args) {
+
+		String input = " car , jeep, scooter ";
+		String[] splitted = input.trim().split("\\s*,\\s*");
+		List ls = Arrays.asList(splitted);
+		
+//		String[] splitted = Arrays.stream(input.split(",")).map(String::trim).toArray(String[]::new);
+	}
+
+}

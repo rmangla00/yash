@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+E:\Sts3Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2400566090.index
+\SMVCDEMO\src\main\resources
+E:\Sts3Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2282837922.index
+\SpringMvcDemo\src\main\resources
+E:\Sts3Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1731142664.index
+\SpringMvcDemo\src\main\java
+E:\Sts3Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1797518751.index
+\SMVCDEMO\src\main\java

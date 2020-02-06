@@ -1,0 +1,15 @@
+package com.yash.AssignmentCore2;
+
+import java.util.LinkedHashMap;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class CharCountInString {
+
+	public LinkedHashMap<Character, Integer> countCharInString(String string) {
+		
+		Stream.of(string).collect(Collectors.toMap(k->k,v->1,Integer::sum ))
+		return null;
+	}
+
+}

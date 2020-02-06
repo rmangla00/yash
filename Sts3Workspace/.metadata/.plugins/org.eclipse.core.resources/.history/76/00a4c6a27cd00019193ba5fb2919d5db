@@ -1,0 +1,33 @@
+package com.yash;
+
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+public class Demo {
+	public static void main(String a[]) {
+		/*
+		 * MyArrayList1 mal = new MyArrayList1(); mal.add(new Integer(2)); mal.add(new
+		 * Integer(5)); mal.add(new Integer(1)); mal.add(new Integer(23)); mal.add(new
+		 * Integer(14)); for (int i = 0; i < mal.size(); i++) {
+		 * System.out.print(mal.get(i) + " "); } mal.add(new Integer(29));
+		 * System.out.println("Element at Index 5:" + mal.get(5));
+		 * System.out.println("List size: " + mal.size());
+		 * System.out.println("Removing element at index 2: " + mal.remove(2)); for (int
+		 * i = 0; i < mal.size(); i++) { System.out.print(mal.get(i) + " "); }
+		 */
+		Predicate<String> p = s -> s.length() > 5;
+
+		String[] strs = { "Rakesh", "Yug", "Sachin" };
+
+		for (String string : strs) {
+			if (p.test(string)) {
+				System.out.println(string);
+			}
+		}
+
+		Consumer<String> c = s -> System.out.println(s);
+		Consumer<Integer> c2 = s -> System.out.println(s);
+
+		c.andThen(c2).accept("XXXXX");
+	}
+}

@@ -1,0 +1,40 @@
+package com.yash.first;
+
+public class CricketCoach implements Coach {
+
+	private String email;
+	private FortuneService fortuneService;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public CricketCoach() {
+		System.out.println("CricketCoach.CricketCoach() no arg const");
+	}
+
+	public FortuneService getFortuneService() {
+		return fortuneService;
+	}
+
+	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println("CricketCoach.setFortuneService()");
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public void getDailyWorkout() {
+		System.out.println("CricketCoach.getDailyWorkout()");
+	}
+
+	@Override
+	public void getFortune() {
+		System.out.println("CricketCoach.getFortune()");
+		fortuneService.getFortune();
+	}
+
+}

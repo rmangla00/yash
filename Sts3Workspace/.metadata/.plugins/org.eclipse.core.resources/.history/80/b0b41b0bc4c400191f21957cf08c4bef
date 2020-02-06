@@ -1,0 +1,143 @@
+
+package com.yash.TeaCoffeeVendingMachine;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Container {
+
+	private static int teaCapacity = 2000;
+	private static int coffeeCapacity = 2000;
+	private static int sugerCapacity = 8000;
+	private static int waterCapacity = 15000;
+	private static int milkCapacity = 10000;
+
+	private static int wastedTea;
+	private static int wastedcoffee;
+	private static int wastedSuger;
+	private static int wastedWater;
+	private static int wastedMilk;
+	
+	public static Map<String, Integer> drinkWiseSale = new HashMap<String, Integer>();
+	
+	public static int getTeaCapacity() {
+		return teaCapacity;
+	}
+
+	public static void setTeaCapacity(int teaCapacity) {
+		Container.teaCapacity = teaCapacity;
+	}
+
+	public static int getCoffeeCapacity() {
+		return coffeeCapacity;
+	}
+
+	public static void setCoffeeCapacity(int coffeeCapacity) {
+		Container.coffeeCapacity = coffeeCapacity;
+	}
+
+	public static int getSugerCapacity() {
+		return sugerCapacity;
+	}
+
+	public static void setSugerCapacity(int sugerCapacity) {
+		Container.sugerCapacity = sugerCapacity;
+	}
+
+	public static int getWaterCapacity() {
+		return waterCapacity;
+	}
+
+	public static void setWaterCapacity(int waterCapacity) {
+		Container.waterCapacity = waterCapacity;
+	}
+
+	public static int getMilkCapacity() {
+		return milkCapacity;
+	}
+
+	public static void setMilkCapacity(int milkCapacity) {
+		Container.milkCapacity = milkCapacity;
+	}
+
+	public static int getWastedTea() {
+		return wastedTea;
+	}
+
+	public static void setWastedTea(int wastedTea) {
+		Container.wastedTea = wastedTea;
+	}
+
+	public static int getWastedcoffee() {
+		return wastedcoffee;
+	}
+
+	public static void setWastedcoffee(int wastedcoffee) {
+		Container.wastedcoffee = wastedcoffee;
+	}
+
+	public static int getWastedSuger() {
+		return wastedSuger;
+	}
+
+	public static void setWastedSuger(int wastedSuger) {
+		Container.wastedSuger = wastedSuger;
+	}
+
+	public static int getWastedWater() {
+		return wastedWater;
+	}
+
+	public static void setWastedWater(int wastedWater) {
+		Container.wastedWater = wastedWater;
+	}
+
+	public static int getWastedMilk() {
+		return wastedMilk;
+	}
+
+	public static void setWastedMilk(int wastedMilk) {
+		Container.wastedMilk = wastedMilk;
+	}
+
+	public static Map<String, Integer> getDrinkWiseSale() {
+		return drinkWiseSale;
+	}
+
+	public static void setDrinkWiseSale(Map<String, Integer> drinkWiseSale) {
+		Container.drinkWiseSale = drinkWiseSale;
+	}
+
+	public void resetContainer() {
+		Container.setTeaCapacity(2000);
+		Container.setCoffeeCapacity(2000);
+		Container.setSugerCapacity(8000);
+		Container.setWaterCapacity(15000);
+		Container.setMilkCapacity(10000);
+	}
+
+	public String containerStatus() {
+		return "Container :\nTea Capacity=" + teaCapacity + "\nCoffee Capacity=" + coffeeCapacity + "\nSuger Capacity="
+				+ sugerCapacity + "\nWater Capacity=" + waterCapacity + "\nMilk Capacity=" + milkCapacity;
+	}
+
+	public static void addSale(String drinkType, int quantity) {
+		if (Container.drinkWiseSale.containsKey(drinkType)) {
+			Container.drinkWiseSale.put(drinkType, Container.drinkWiseSale.get(drinkType) + quantity);
+		} else {
+			Container.drinkWiseSale.put(drinkType, quantity);
+		}
+	}
+
+	public String totalDrinkWiseSale() {
+		return "Drink Wise Sale " + drinkWiseSale;
+	}
+
+	public String totalDrinkSale() {
+		Long totalDrinkOdered = drinkWiseSale.entrySet().stream().map(e -> e.getValue())
+				.collect(Collectors.summarizingInt(n -> n)).getSum();
+		return "Total Drink Orderd : " + totalDrinkOdered;
+	}
+
+}

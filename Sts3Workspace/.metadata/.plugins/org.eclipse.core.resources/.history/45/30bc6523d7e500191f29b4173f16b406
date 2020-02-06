@@ -1,0 +1,67 @@
+package com.yash.controller;
+
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.RequestBuilder;
+
+import com.yash.model.Employee;
+import com.yash.service.EmployeeService;
+
+@RunWith(SpringRunner.class)
+@WebMvcTest(value = EmployeeController.class)
+public class EmployeeControllerTest {
+
+	@Autowired
+	private MockMvc mockMvc;
+
+	@MockBean
+	private EmployeeService employeeService;
+
+	@Test
+	public void shouldReturnListOfEmployees() throws Exception {
+		List<Employee> employees = Arrays.asList(new Employee(101, "name1", 1000), new Employee(102, "name2", 2000));
+
+		when(employeeService.getAllEmployees()).thenReturn(employees);
+
+		RequestBuilder requestBuilder = get("/employees").accept(MediaType.APPLICATION_JSON);
+
+		MvcResult mvcResult = mockMvc.perform(requestBuilder).andReturn();
+
+		System.out.println(mvcResult.getResponse().getContentAsString());
+
+		verify(employeeService, times(1)).getAllEmployees();
+
+	}
+
+	@Test
+	public void shouldAddEmployee() throws Exception {
+		Employee employee = new Employee(101, "name1", 1000);
+
+		when(employeeService.getAllEmployees()).thenReturn(employees);
+
+		RequestBuilder requestBuilder = get("/employees").accept(MediaType.APPLICATION_JSON);
+
+		MvcResult mvcResult = mockMvc.perform(requestBuilder).andReturn();
+
+		System.out.println(mvcResult.getResponse().getContentAsString());
+
+		verify(employeeService, times(1)).getAllEmployees();
+
+	}
+
+}

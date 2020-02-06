@@ -1,0 +1,72 @@
+package com.yash.TeaCoffeeVendingMachine;
+
+import java.util.Scanner;
+
+public class VendingMachine {
+
+	public static void main(String[] args) {
+
+		boolean flag = true;
+		System.out.println("Welcome to Tea-Coffee Vending Machine");
+		Container container = new Container();
+		Drink drink;
+
+		while (flag) {
+			System.out.println("\n*****************************************");
+			System.out.println("Press 1 for Tea");
+			System.out.println("Press 2 for Black Tea");
+			System.out.println("Press 3 for Coffee");
+			System.out.println("Press 4 for Black Coffee");
+			System.out.println("Press 5 to Refill Container");
+			System.out.println("Press 6 to Check Total Sale");
+			System.out.println("Press 7 to Check Container Status");
+			System.out.println("Press 8 to Reset Container");
+			System.out.println("Press 0 to Exit Vending Machine");
+			System.out.println("*****************************************\n");
+
+			Scanner in = new Scanner(System.in);
+			int num = in.nextInt();
+			int quantity = 0;
+
+			try {
+				switch (num) {
+				case 1:
+					System.out.println("You have selected Tea");
+					drink = new Tea();
+					System.out.println("How much tea you want");
+					quantity = in.nextInt();
+					drink.makeDrink(quantity);
+					System.out.println(container.containerStatus());
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					System.out.println(container.totalDrinkWiseSale());
+					break;
+				case 7:
+					System.out.println(container.containerStatus());
+					break;
+				case 8:
+					container.resetContainer();
+					break;
+				case 0:
+					System.out.println("Exiting Vending Machine...");
+					in.close();
+					flag = false;
+					break;
+				default:
+					System.out.println("You have entered wrong input...");
+					break;
+				}
+			} catch (VandingMachineException exception) {
+				System.out.println("Exception occured: " + exception);
+			}
+		}
+	}
+}

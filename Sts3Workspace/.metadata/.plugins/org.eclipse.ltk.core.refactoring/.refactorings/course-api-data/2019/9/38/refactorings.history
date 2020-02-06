@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.demo.springbootstarter.topic&apos; to &apos;com.example.demo.topic&apos;&#x0D;&#x0A;- Original project: &apos;course-api-data&apos;&#x0D;&#x0A;- Original element: &apos;course-api-data/src/main/java/com.demo.springbootstarter.topic&apos;&#x0D;&#x0A;- Renamed element: &apos;course-api-data/src/main/java/com.example.demo.topic&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.demo.springbootstarter.topic&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.demo.springbootstarter.topic" name="com.example.demo.topic" qualified="false" references="true" stamp="1568730466304" textual="false" version="1.0"/>
+</session>

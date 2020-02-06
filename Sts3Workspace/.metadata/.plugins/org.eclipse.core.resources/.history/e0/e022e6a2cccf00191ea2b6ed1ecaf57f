@@ -1,0 +1,8 @@
+package com.yash;
+
+public class Demo {
+	private void man() {
+		// TODO Auto-generated method stub
+
+	}
+}

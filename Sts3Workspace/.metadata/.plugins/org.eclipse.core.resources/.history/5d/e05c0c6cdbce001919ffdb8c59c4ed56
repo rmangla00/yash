@@ -1,0 +1,13 @@
+package com.test;
+
+import java.util.function.Function;
+
+public class Demo {
+	public static void main(String[] args) {
+		System.out.printf("%15s %15s %15s %n", "Drink Type", "Quantity", "Cost");
+		
+		Function f (i)->i*i;
+
+	}
+
+}
