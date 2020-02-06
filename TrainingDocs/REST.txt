@@ -1,0 +1,24 @@
+@Rest controller
+@Controller
+
+
+@ControllerAdvice
+@RestControllerAdvice
+@Repository
+
+
+Basics
+
+message container
+HATEOS
+
+
+Status message
+200
+300
+400
+500
+
+@PathVeriable
+@RequestPeram
+@queryParam

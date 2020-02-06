@@ -1,0 +1,22 @@
+@RunWith(MockitoJUnitRunner.class) is like application context in spring
+
+Steps to use Mockito
+1. dummy data 
+2. mocking
+3. real call
+4. verify
+5. assert
+
+
+mockito
+verify
+assestion
+mvcmock
+DAO
+verify hashcode/equals
+argument captor
+power mockito
+stubbing
+mockito argument matcher
+
+

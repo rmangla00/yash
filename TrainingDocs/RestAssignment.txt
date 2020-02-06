@@ -1,0 +1,17 @@
+Hi Team.
+
+	1)Create a Rest service which will do  curd operation.
+	2)Also implement centralise place for logging for each and every methods from controller layer to dao layer.
+	3)implement centralise exception handling.
+	4)proper error handling with meaningful status code and error message
+	5)it will give response in XML as well as Json.
+
+Optional: It you want you can also implement parse content-type like 
+application/vnd.yash.com.v1+json and application/vnd.yash.com.v1+xml  but response will still in json and xml base on content type.
+
+Please let me know if you have any query.
+
+Please submit this assignment on or before 27-Sep-2019.
+
+Thanks & Regards,
+Pappu Rout
